@@ -25,8 +25,8 @@ function getHumanChoice() {
 
 // Playgame
 function playGame() {
-let computerScore = 0;
-let humanScore = 0;
+computerScore;
+humanScore;
 
 
 function playRound() {
@@ -64,8 +64,8 @@ function playRound() {
     
 }
 
-
-for (let i = 0; i < 5; i++) {
+// playround 5 times
+for (let i = 1; i < 5; i++) {
 
 computerSelection = getComputerChoice();
 humanSelection = getHumanChoice();
@@ -73,15 +73,17 @@ humanSelection = getHumanChoice();
 console.log(computerSelection, humanSelection)
 console.log(computerScore, humanScore)
 playRound() 
-}
+ }
 
-
+// game winner
 if(computerScore > humanScore ) {
 console.log('computer wins')
 } else if (humanScore > computerScore){
-    console.log('You win')
-} else { 
-    alert ('error')
+    console.log('Human wins')
+} else if (humanScore == computerScore) { 
+    console.log('Draw, no one wins')
+ } else {
+    alert ('Error')
  }
 }
  
